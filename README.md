@@ -117,7 +117,7 @@ ID and year must be numbers
 
 ---
 
-#Update API endpoints
+#Patch API endpoints
 
 http://localhost:8000/cars/update/json
 
