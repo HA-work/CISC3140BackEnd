@@ -22,45 +22,68 @@ This will return all of the records in the database
 It has query capabilities for year and make
 
 For make I edited the code so that you do not need to use quotation marks
+---
 
 http://localhost:8000/cars/display?year=2001
 
 will return all the cars with year 2001
 
+---
+
 http://localhost:8000/cars/display?make=Honda
 
 will return all the cars with a make of Honda
-
+---
 
 http://localhost:8000/cars/display?make=Honda&year=2006
 
 will return all the cars with a make of Honda and a year of 2006
-
+---
 
 http://localhost:8000/cars/display/id/128
 
 will return the car with the id 128
 
-
+---
 http://localhost:8000/cars/display/rank/5
 
 will return the car with a rank of 5
 
-
+---
 http://localhost:8000/cars/display/year/2001
 
 will return the cars with a year of 2001
-
+---
 http://localhost:8000/cars/display/make/Honda
 
 will return all the cars with a make of Honda
-
+---
 
 http://localhost:8000/cars/display/model/Accord
 
 will return all the cars with a model of Accord
 
+---
+#Post API endpoints
 
 
+http://localhost:8000/cars/register/json
 
+along with a json object like
+{
+	"carid":-11,
+	"carmake":"test",
+	"carmodel":"test",
+	"name":"test",
+	"caryear":90,
+	"email":"test"
+}
+
+Will add a record with the included values
+
+The values are optional as I have -1 inserted if nothing is entered as a placeholder
+
+year and id must be numbers or else an error occurs
+
+---
 
