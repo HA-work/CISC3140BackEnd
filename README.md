@@ -87,3 +87,79 @@ year and id must be numbers or else an error occurs
 
 ---
 
+
+http://localhost:8000/cars/register/query?carid=-11
+
+will create a record with Car_ID -11 and add it to the database
+you can also do other queries like
+
+http://localhost:8000/cars/register/query?carid=-11&carmake=Test
+
+This will also set the Car_Make
+
+
+You do not use quotation marks and I have placeholders for values not entered
+
+---
+
+
+http://localhost:8000/cars/register/parameters/-11/testmake/testmodel/testemail/testname/-11
+
+
+this will add a record with an id of -11 and a year of -11
+
+The rest of the values say what they are for
+
+They must be in the order shown
+
+ID and year must be numbers
+
+
+---
+
+#Update API endpoints
+
+http://localhost:8000/cars/update/json
+
+with a json object like
+
+{
+	"carid":-11,
+	"ranking":-90,
+	"score":-70
+}
+
+Will update the record with id -11
+
+an id must be given
+if not I send a message
+
+you do not need to update both 
+If you update only ine the other will stay the same
+
+
+---
+
+http://localhost:8000/cars/update/query?carid=-11&ranking=-777
+
+will update the ranking of the car with id -11
+
+you can also use a query for score to change Total_Score
+
+a carid must be given
+I send a message if not provided
+
+
+---
+
+
+http://localhost:8000/cars/update/parameters/-11/100/0
+
+
+will work on a car with id -11 and change the score to 100 and the ranking to 0
+
+These must all be numbers and must all be there
+
+
+
+
